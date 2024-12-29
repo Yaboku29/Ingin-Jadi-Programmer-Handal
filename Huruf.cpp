@@ -118,7 +118,7 @@ int main(){
             if(nama[i]=='Z'||nama[i]=='z'){
                 hurufZ(j);
             }
-            if(nama[i]==' ') spasi(j);
+            if(nama[i]=='_') spasi(j);
         }
         cout<<endl;
     }
@@ -196,44 +196,50 @@ void hurufI(int a){//done
         }
     cout<<" ";
 }
-void hurufJ(int a){
+void hurufJ(int a){//done
     for(int i=1;i<=5;i++){
-            if(a==1&&(i==1||i==5)) cout<<" ";
-            else if((a==2||a==3||a==5||a==6)&&(i>1&&i<5)) cout<<" ";
+            if((a>=2&&a<=4)&&(i>=1&&i<5)) cout<<" ";
+            else if(a==5&&(i>1&&i<5)) cout<<" ";
+            else if(a==6&&(i==1||i==5)) cout<<" ";
             else cout<<"*";
         }
     cout<<" ";
 }
-void hurufK(int a){
+void hurufK(int a){//done
     for(int i=1;i<=5;i++){
-            if(a==1&&(i==1||i==5)) cout<<" ";
-            else if((a==2||a==3||a==5||a==6)&&(i>1&&i<5)) cout<<" ";
+            if((a==1||a==5)&&(i==2||i==3||i==5)) cout<<" ";
+            else if((a==2||a==4)&&(i==2||i>3)) cout<<" ";
+            else if(a==3&&i>2) cout<<" ";
+            else if(a==6&&(i>1&&i<5)) cout<<" ";
             else cout<<"*";
         }
     cout<<" ";
 }
-void hurufL(int a){
+void hurufL(int a){//done
     for(int i=1;i<=5;i++){
-            if(a==1&&(i==1||i==5)) cout<<" ";
-            else if((a==2||a==3||a==5||a==6)&&(i>1&&i<5)) cout<<" ";
-            else cout<<"*";
-        }
+        if(a!=6&&i>1) cout<<" ";
+        else cout<<"*";
+    }
     cout<<" ";
 }
-void hurufM(int a){
+void hurufM(int a){//done
     for(int i=1;i<=5;i++){
-            if(a==1&&(i==1||i==5)) cout<<" ";
-            else if((a==2||a==3||a==5||a==6)&&(i>1&&i<5)) cout<<" ";
-            else cout<<"*";
-        }
+        if((a==1||a>3)&&(i>1&&i<5)) cout<<" ";
+        else if(a==2&&i==3) cout<<" ";
+        else if(a==3&&(i==2||a==4)) cout<<" ";
+        else cout<<"*";
+
+    }
     cout<<" ";
 }
-void hurufN(int a){
+void hurufN(int a){//done
     for(int i=1;i<=5;i++){
-            if(a==1&&(i==1||i==5)) cout<<" ";
-            else if((a==2||a==3||a==5||a==6)&&(i>1&&i<5)) cout<<" ";
-            else cout<<"*";
-        }
+        if((a==1||a>4)&&(i>1&&i<5)) cout<<" ";
+        else if(a==2&&(i>2&&i<5)) cout<<" ";
+        else if(a==3&&(i==2||i==4)) cout<<" ";
+        else if(a==4&&(i>1&&i<4)) cout<<" ";
+        else cout<<"*";
+    }
     cout<<" ";
 }
 void hurufO(int a){
@@ -332,6 +338,6 @@ void hurufZ(int a){
         }
     cout<<" ";
 }
-void spasi(int a){
-    
+void spasi(int a){//done
+    cout<<"  ";
 }
